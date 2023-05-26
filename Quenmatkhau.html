@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+          width: 300px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #f0f0f0;
+        }
+
+        h2 {
+          color: #333;
+          text-align: center;
+        }
+
+        label {
+          display: block;
+          margin-top: 10px;
+        }
+
+        input {
+          margin-top: 5px;
+          padding: 5px;
+          width: 100%;
+        }
+
+        button {
+          margin-top: 10px;
+          padding: 5px 10px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+        }
+
+        #resetPasswordForm {
+          display: none;
+        }
+    </style>
+  <title>Quên mật khẩu</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Quên mật khẩu</h2>
+    <form id="forgotPasswordForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">Gửi yêu cầu</button>
+    </form>
+
+    <div id="resetPasswordForm" style="display: none;">
+        <form action="index.html">
+            <label for="newPassword">Mật khẩu mới:</label>
+      <input type="password" id="newPassword" name="newPassword" required>
+      <button id="resetPasswordButton" type="submit">Đặt lại mật khẩu</button>
+        </form>
+      
+    </div>
+
+   <script>
+  
+  
+  document.getElementById('forgotPasswordForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var email = document.getElementById('email').value;
+  
+  // Gửi yêu cầu đặt lại mật khẩu đến server
+  // Ở đây, ta có thể sử dụng AJAX hoặc fetch API để gửi yêu cầu đến backend
+  
+  // Hiển thị form đặt lại mật khẩu
+  document.getElementById('forgotPasswordForm').style.display = 'none';
+  document.getElementById('resetPasswordForm').style.display = 'block';
+});
+
+document.getElementById('resetPasswordForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var newPassword = document.getElementById('newPassword').value;
+  
+  // Gửi mật khẩu mới đến server để đặt lại mật khẩu cho người dùng
+  // Ở đây, ta có thể sử dụng AJAX hoặc fetch API để gửi yêu cầu đến backend
+  
+  // Hiển thị thông báo thành công
+  alert('Mật khẩu đã được đặt lại thành công!');
+  
+  // Chuyển hướng người dùng đến trang "dannhap.html"
+  window.location.href = 'dannhap.html';
+});
+
+
+
+
+
+
+
+   </script>
+  </div>
+</body>
+</html>
