@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="dangky.css">
 	<script src="./dangky.js"></script>
 	<link rel="icon" href="logo.png">
 <title>Đăng ký</title>
@@ -14,7 +15,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
-<link rel="stylesheet" href="dangky.css">
+<link rel="stylesheet" href="../css/dangky.css">
 <!-- //Custom Theme files -->
 <!-- web font -->
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -27,10 +28,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form action="dannhap.html">
-					<input class="text" type="text" name="Username" placeholder="Username" required="">
-					<input class="text email" type="email" name="email" placeholder="Email" required="">
-					<input class="text" type="password" name="password" placeholder="Password" required="">
-					<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+					
+					<input id="username" type="text" placeholder="Username">
+					<input id="email" type="email" placeholder="Email">
+					<input id="password" type="password" placeholder="Password">
+					<input id="confirmPassword" type="password" placeholder="Confirm Password">
+					<button class="id" type="submit" style="margin: 150px;color: #ffffff;font-size: 20px;" onclick="validateForm()">Đăng ký</button>
 					<div class="wthree-text">
 						<label class="anim">
 							<input type="checkbox" class="checkbox" required="">
@@ -38,13 +41,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="SIGNUP">
 				</form>
-				<p>Don't have an Account? <a href="dannhap.html"> Login Now!</a></p>
+				<p>Don't have an Account? <a href="../html/dannhap.html"> Login Now!</a></p>
 			</div>
 		</div>
 		<!-- copyright -->
-		<div class="colorlibcopy-agile">
+		
 			
 		</div>
 		<!-- //copyright -->
